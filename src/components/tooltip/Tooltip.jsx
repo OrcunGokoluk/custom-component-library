@@ -2,14 +2,14 @@ import React from 'react'
 import { GrTooltip } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
 
-function Tooltip({ color="tooltip-default-color",title="Tooltip", text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, at!"}) {
+function Tooltip({ icon=<GrTooltip/>, color="tooltip-default-color",title="Tooltip", text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, at!", mode="light"}) {
   return (
     <>
       <div className={`tooltip ${color}`}>
 
       <div className="tooltip-body">
         <section className={`tooltip-icon ${color}`}>
-            <GrTooltip/>
+            {icon}
         </section>
         <section className="tooltip-content">
             <h3>{title}</h3>
