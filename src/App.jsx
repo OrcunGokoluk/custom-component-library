@@ -16,6 +16,11 @@ import { FaStar } from "react-icons/fa";
 
 function App() {
 
+  const [isVisible, setIsVisible] = React.useState(true);
+
+  function handleReset() {
+    setIsVisible(prev=>prev+1); // Reset butonuna basınca tooltip'leri aç
+  }
 
   return (
     <>
@@ -48,26 +53,27 @@ function App() {
 
       {/* Tooltip */}
       <ShowcaseWrapper>
+        <button onClick={handleReset} className='visibility-reset-button'>RESET</button>
         <HorizontalShowcaseSection>
           <VerticalShowcaseSection>
-            <Tooltip icon={<FaReact/>}/>
-            <Tooltip color="red" icon={<FaGithub/>}/>
-            <Tooltip color="green" icon={<IoLogoJavascript/>}/>
-            <Tooltip color="blue" icon={<BiLogoMongodb/>}/>
-            <Tooltip color="indigo" icon={<SiTypescript/>}/>
-            <Tooltip color="purple" icon={<SiAngular/>}/>
-            <Tooltip color="pink" icon={<FaGitlab/>}/>
-            <Tooltip color="yellow" icon={<FaStar/>}/>
+            <Tooltip icon={<FaReact/>} visible={isVisible} />
+            <Tooltip color="red" icon={<FaGithub/>} visible={isVisible}/>
+            <Tooltip color="green" icon={<IoLogoJavascript/>} visible={isVisible}/>
+            <Tooltip color="blue" icon={<BiLogoMongodb/>} visible={isVisible}/>
+            <Tooltip color="indigo" icon={<SiTypescript/>} visible={isVisible}/>
+            <Tooltip color="purple" icon={<SiAngular/>} visible={isVisible}/>
+            <Tooltip color="pink" icon={<FaGitlab/>} visible={isVisible}/>
+            <Tooltip color="yellow" icon={<FaStar/>} visible={isVisible}/>
           </VerticalShowcaseSection>
           <VerticalShowcaseSection>
-            <Tooltip/>
-            <Tooltip color="red"/>
-            <Tooltip color="green"/>
-            <Tooltip color="blue"/>
-            <Tooltip color="indigo"/>
-            <Tooltip color="purple"/>
-            <Tooltip color="pink"/>
-            <Tooltip color="yellow"/>
+            <Tooltip visible={isVisible}/>
+            <Tooltip color="red" visible={isVisible}/>
+            <Tooltip color="green" visible={isVisible}/>
+            <Tooltip color="blue" visible={isVisible}/>
+            <Tooltip color="indigo" visible={isVisible}/>
+            <Tooltip color="purple" visible={isVisible}/>
+            <Tooltip color="pink" visible={isVisible}/>
+            <Tooltip color="yellow" visible={isVisible}/>
           </VerticalShowcaseSection>          
         </HorizontalShowcaseSection>
       </ShowcaseWrapper>
