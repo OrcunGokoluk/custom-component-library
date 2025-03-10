@@ -1,4 +1,5 @@
 import React from 'react'
+import "./badge.css"
 
 function Badge({color="badge-default",text='Add me a "text" prop...', border=true}) {
   return (

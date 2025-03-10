@@ -2,6 +2,7 @@ import React from 'react'
 import { GrTooltip } from "react-icons/gr";
 import { IoClose } from "react-icons/io5";
 import useToggleTooltip from './useToggleTooltip';
+import "./tooltip.css"
 
 function Tooltip({ icon=<GrTooltip/>, color="tooltip-default-color",title="Tooltip", text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, at!", visible=true}) {
 
@@ -25,10 +26,8 @@ function Tooltip({ icon=<GrTooltip/>, color="tooltip-default-color",title="Toolt
             <IoClose/>
         </button>
       </div>
-
-        <div className={`tooltip-tail ${color}`} >
-            
-        </div>
+        <div className={`tooltip-tail ${color}`} >        
+      </div>
       </div>:null
       }
     </>
