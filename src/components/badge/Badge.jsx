@@ -8,7 +8,7 @@ function Badge({color="badge-default",text='Add me a "text" prop...', border=tru
 
   return (
     <>
-        <div className={`badge ${color}`} style={border?{border:`1px solid`}:null} >
+        <div className={`badge ${color} ${border?"":"badge-shadow"}`} style={border?{border:`1px solid`}:null} >
             {text}
         </div>
     </>

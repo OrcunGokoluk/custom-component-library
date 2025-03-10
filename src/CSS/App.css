@@ -22,8 +22,17 @@ main{
     border-radius: .3rem;
     margin-top: 3rem;
 }
-.showcase-section{
+.horizontal-showcase-section{
     display: flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: space-evenly;
+    background-color: #e3dfff;
+    border-radius: .3rem;
+}
+.vertical-showcase-section{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap:1rem;
     justify-content: space-evenly;
@@ -37,6 +46,9 @@ main{
     font-family: 'Roboto', sans-serif;
     padding: .2rem;
     border-radius: .2rem;
+}
+.badge-shadow{
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 .badge-default{
     color:#1F2937;
@@ -71,3 +83,32 @@ main{
     color: #9D174D;
     background-color: #FCE7F3;
 }
+/* Tooltip */
+.tooltip{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    border-radius: .3rem;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+
+}
+.tooltip-body{
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2;
+}
+.tooltip-tail{
+    position: absolute;
+    bottom:-.4rem;
+    padding: .4rem;
+    left: .5rem;
+    transform: rotate(45deg);
+    border-radius: 0 0 .2rem;
+    border-top-left-radius: 0; 
+
+}
+.tooltip-default-color{
+    color: #111827;
+    background-color:#FFFFFF;
+}
+
+/* Tooltip */
