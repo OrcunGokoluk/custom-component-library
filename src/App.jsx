@@ -12,6 +12,7 @@ import { SiTypescript } from "react-icons/si";
 import { SiAngular } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 import { FaGitlab } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa";
 
 function App() {
 
@@ -49,14 +50,14 @@ function App() {
       <ShowcaseWrapper>
         <HorizontalShowcaseSection>
           <VerticalShowcaseSection>
-            <Tooltip/>
-            <Tooltip color="red" icon={<FaReact/>}/>
+            <Tooltip icon={<FaReact/>}/>
+            <Tooltip color="red" icon={<FaGithub/>}/>
             <Tooltip color="green" icon={<IoLogoJavascript/>}/>
             <Tooltip color="blue" icon={<BiLogoMongodb/>}/>
             <Tooltip color="indigo" icon={<SiTypescript/>}/>
             <Tooltip color="purple" icon={<SiAngular/>}/>
-            <Tooltip color="pink" icon={<FaGithub/>}/>
-            <Tooltip color="yellow" icon={<FaGitlab/>}/>
+            <Tooltip color="pink" icon={<FaGitlab/>}/>
+            <Tooltip color="yellow" icon={<FaStar/>}/>
           </VerticalShowcaseSection>
           <VerticalShowcaseSection>
             <Tooltip/>
